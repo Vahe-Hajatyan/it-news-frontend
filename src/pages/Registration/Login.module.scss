@@ -1,0 +1,39 @@
+.root {
+  @media (min-width: 425px) {
+    width: 400px;
+  }
+  padding: 50px;
+  border: 1px solid #dedede;
+  margin: 50px auto;
+}
+
+.field {
+  margin-bottom: 20px !important;
+}
+
+.title {
+  text-align: center !important;
+  font-weight: bold !important;
+  margin-bottom: 30px !important;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.avatarCursor {
+  cursor: pointer;
+}
+.userAvatar {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+.p {
+  font-size: 14px;
+  margin: -28px 0 20px 0px;
+  text-align: center;
+  color: #565656;
+}

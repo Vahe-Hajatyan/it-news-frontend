@@ -1,0 +1,14 @@
+.root {
+  margin-bottom: 20px;
+  width: auto;
+  &Full {
+    @media (max-width: 559px) {
+      width: 445%;
+    }
+  }
+}
+
+.title {
+  padding: 15px 15px 0 15px;
+  border-bottom: 1px solid #ebebeb;
+}
