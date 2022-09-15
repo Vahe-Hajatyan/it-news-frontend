@@ -74,7 +74,13 @@ export const Registration = () => {
             <img
               onClick={() => inputRef.current.click()}
               className={styles.userAvatar}
-              src={avatarUrl ? `http://localhost:4444${avatarUrl}` : ""}
+              src={
+                avatarUrl
+                  ? `${
+                      process.env.REACT_APP_API_URL || "http://localhost:4444"
+                    }${avatarUrl}`
+                  : ""
+              }
               alt="Uploaded"
             />
           )}

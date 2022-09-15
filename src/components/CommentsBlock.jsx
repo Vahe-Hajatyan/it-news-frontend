@@ -24,7 +24,10 @@ export const CommentsBlock = ({ items, children, isLoading = true }) => {
                     alt={obj.user.fullName}
                     src={
                       obj.user.avatarUrl
-                        ? `http://localhost:4444${obj.user.avatarUrl}`
+                        ? `${
+                            process.env.REACT_APP_API_URL ||
+                            "http://localhost:4444"
+                          }${obj.user.avatarUrl}`
                         : ""
                     }
                   />

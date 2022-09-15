@@ -32,7 +32,11 @@ export const TagsPost = () => {
               id={obj._id}
               title={obj.title}
               imageUrl={
-                obj.imageUrl ? `http://localhost:4444${obj.imageUrl}` : ""
+                obj.imageUrl
+                  ? `${
+                      process.env.REACT_APP_API_URL || "http://localhost:4444"
+                    }${obj.imageUrl}`
+                  : ""
               }
               user={obj.user}
               createdAt={obj.createdAt}
