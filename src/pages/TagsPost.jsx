@@ -34,7 +34,9 @@ export const TagsPost = () => {
               imageUrl={
                 obj.imageUrl
                   ? `${
-                      process.env.REACT_APP_API_URL || "http://localhost:4444"
+                      !process.env.REACT_APP_API_URL
+                        ? "http://localhost:4444"
+                        : process.env.REACT_APP_API_URL
                     }${obj.imageUrl}`
                   : ""
               }

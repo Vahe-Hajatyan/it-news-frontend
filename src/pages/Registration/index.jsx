@@ -77,7 +77,9 @@ export const Registration = () => {
               src={
                 avatarUrl
                   ? `${
-                      process.env.REACT_APP_API_URL || "http://localhost:4444"
+                      !process.env.REACT_APP_API_URL
+                        ? "http://localhost:4444"
+                        : process.env.REACT_APP_API_URL
                     }${avatarUrl}`
                   : ""
               }

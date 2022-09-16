@@ -20,7 +20,7 @@
   border-radius: 5px;
   padding: 0 10px;
   text-decoration: none;
-  @media (max-width: 387px) {
+  @media (max-width: 407px) {
     width: 100px;
     height: 38px;
   }
@@ -30,7 +30,7 @@
 }
 
 .buttons {
-  @media (max-width: 384px) {
+  @media (max-width: 387px) {
     display: flex;
   }
   a {

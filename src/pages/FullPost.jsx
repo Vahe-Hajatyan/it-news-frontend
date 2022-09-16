@@ -43,9 +43,11 @@ export const FullPost = () => {
         title={comment.items.title}
         imageUrl={
           comment.items.imageUrl
-            ? `${process.env.REACT_APP_API_URL || "http://localhost:4444"}${
-                comment.items.imageUrl
-              }`
+            ? `${
+                !process.env.REACT_APP_API_URL
+                  ? "http://localhost:4444"
+                  : process.env.REACT_APP_API_URL
+              }${comment.items.imageUrl}`
             : ""
         }
         user={comment.items.user}

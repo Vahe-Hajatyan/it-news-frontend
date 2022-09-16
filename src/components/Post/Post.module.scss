@@ -54,7 +54,9 @@ $blue: #4361ee;
   p {
     font-size: 22px;
     line-height: 36px;
-
+    @media (max-width: 550px) {
+      font-size: 17px;
+    }
     img {
       width: 95%;
     }
@@ -63,11 +65,15 @@ $blue: #4361ee;
 
 .indention {
   padding-left: 5%;
+  padding-top: 3%;
 }
 
 .title {
   font-size: 28px;
   margin: 0;
+  @media (max-width: 450px) {
+    font-size: 22px;
+  }
 
   a {
     text-decoration: none;
@@ -81,8 +87,8 @@ $blue: #4361ee;
   &Full {
     font-size: 42px;
     font-weight: 900;
-    @media (max-width: 374px) {
-      font-size: 38px;
+    @media (max-width: 550px) {
+      font-size: 25px;
     }
   }
 }
