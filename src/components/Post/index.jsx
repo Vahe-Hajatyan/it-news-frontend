@@ -26,6 +26,7 @@ export const Post = ({
   isLoading,
   isEditable,
   isAdmin,
+  isTegPost,
 }) => {
   const dispatch = useDispatch();
 
@@ -38,7 +39,13 @@ export const Post = ({
     return <PostSkeleton isFullPost={isFullPost} />;
   }
   return (
-    <div className={clsx(styles.root, { [styles.rootFull]: isFullPost })}>
+    <div
+      className={clsx(
+        styles.root,
+        { [styles.rootFull]: isFullPost },
+        { [styles.rootTeg]: isTegPost }
+      )}
+    >
       {isEditable && (
         <div className={styles.editButtons}>
           {isAdmin ? (

@@ -46,6 +46,7 @@ export const TagsPost = () => {
               commentsCount={3}
               tags={obj.tags}
               isEditable={userData?._id === obj.user?._id}
+              isTegPost
             />
           )
         )}
